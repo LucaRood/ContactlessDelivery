@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for file in ContactlessDelivery_*.svg
+for file in source/ContactlessDelivery_*.svg
 do
-	convert -quality 98 -density 300 "$file" "${file%.svg}.jpg"
+	convert -quality 98 -density 300 "$file" "$(basename ${file%.svg}).jpg"
 done
